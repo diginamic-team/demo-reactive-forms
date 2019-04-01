@@ -1,0 +1,9 @@
+<form [formGroup]="monForm" novalidate>
+  Nom : <input type="text" formControlName="nom">
+  <div *ngIf="nom.dirty && nom.invalid">
+    Nom invalide
+  </div>
+  Prenom : <input type="text" formControlName="prenom">
+
+  <button (click)="valider()">Valider</button>
+</form>
